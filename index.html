@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Калькулятор бізнес-кредиту</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1>Business Credit Calculator</h1>
+      <p>Розрахунок щомісячного платежу та переплати за бізнес-кредитом</p>
+    </div>
+  </header>
+
+  <main class="container main-content">
+    <section class="calculator-card">
+      <h2>Розрахунок кредиту</h2>
+
+      <div class="form-group">
+        <label for="amount">Сума кредиту (грн)</label>
+        <input type="number" id="amount" placeholder="Наприклад, 300000" />
+      </div>
+
+      <div class="form-group">
+        <label for="term">Термін кредиту (місяців)</label>
+        <input type="number" id="term" placeholder="Наприклад, 24" />
+      </div>
+
+      <div class="form-group">
+        <label for="rate">Річна відсоткова ставка (%)</label>
+        <input type="number" id="rate" step="0.01" placeholder="Наприклад, 18" />
+      </div>
+
+      <button id="calculateBtn">Розрахувати</button>
+
+      <div class="result-box" id="result">
+        <h3>Результат</h3>
+        <p><strong>Щомісячний платіж:</strong> <span id="monthlyPayment">—</span></p>
+        <p><strong>Загальна сума виплат:</strong> <span id="totalPayment">—</span></p>
+        <p><strong>Переплата:</strong> <span id="overpayment">—</span></p>
+      </div>
+
+      <p class="note">
+        Розрахунок виконується за ануїтетною формулою, яка найчастіше використовується банками.
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© Гнесь Вікторія 2026</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
